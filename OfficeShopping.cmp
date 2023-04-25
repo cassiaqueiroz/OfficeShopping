@@ -1,0 +1,45 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="pageReference" type="Object"/>
+    <lightning:recordEditForm aura:id="recordEditForm" objectApiName="OfficeShopping__c">
+        <lightning:messages />
+        <lightning:card iconName="standard:user" title="Lista Compras para o escritório">
+            <div class="slds-box slds-theme_default">
+                <div class="slds-align_absolute-center">
+                    
+                </div>
+                <div class="slds-m-top_small">
+                    <div class="slds-col slds-p-horizontal_medium" >
+                        <lightning:inputField fieldName="Name" id="input"/>
+                        <lightning:inputField fieldName="ProductName__c" required="true" id="input" />
+                        <lightning:inputField fieldName="Quantity__c" id="input" />
+                        <lightning:inputField fieldName="DateOfPurchase__c" id="input" />
+                        <lightning:inputField fieldName="UnitPrice__c" required="true" id="input"  />
+                        <lightning:inputField fieldName="TotalPrice__c" required="true" id="input" />
+                        
+                    </div>
+                </div>
+                <lightning:inputField fieldName="Company" /><br/>
+                <div class="slds-m-top_small">
+                    <div class="slds-m-bottom_small">
+                        <div class="slds-grid slds-grid_align-end">
+                            <div class="slds-grid slds-grid_vertical" style="height:130px">
+                                <div class="slds-col">
+                                    <span> <div class="slds-col slds-p-horizontal_medium">
+                                        <p class="slds-box slds-text-heading_small">
+                                            <lightning:icon iconName="action:new_note" alternativeText="New note" title="New note" />
+                                        </p>
+                                        </div></span>
+                                </div>
+                                <div class="slds-col">
+                                    <span> 
+                                        <lightning:button variant="success" class="slds-m-top_small" type="submit" label="Create new" onclick="{!c.create}" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </lightning:card>
+    </lightning:recordEditForm>
+</aura:component>
