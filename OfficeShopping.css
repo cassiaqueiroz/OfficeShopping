@@ -1,0 +1,17 @@
+.THIS   { 
+    font-size: 18px;
+   
+} 
+
+
+.THIS button {
+    color: white;
+    background-color: #34becd;
+    border: 1px solid white;
+
+}
+
+.THIS button:hover {
+    color: black;
+}
+    
